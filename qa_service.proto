@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package qa;
+
+service QAService {
+  // 定义一个问答方法
+  rpc GetAnswer(Question) returns (Answer);
+}
+
+// 定义请求消息
+message Question {
+  string text = 1;
+}
+
+// 定义响应消息
+message Answer {
+  string text = 1;
+}
